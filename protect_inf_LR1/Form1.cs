@@ -17,7 +17,7 @@ namespace protect_inf_LR1
     public partial class Form1 : Form
     {
         char[] characters = new char[] { '#', 'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ё', 'Ж', 'З', 'И',
-                                                        'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 
+                                                        'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С',
                                                         'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ь', 'Ы', 'Ъ',
                                                         'Э', 'Ю', 'Я', ' ', '1', '2', '3', '4', '5', '6', '7',
                                                         '8', '9', '0' };
@@ -30,41 +30,31 @@ namespace protect_inf_LR1
         //зашифровать
         private void buttonEncrypt_Click(object sender, EventArgs e)
         {
-            if ((textBox_p.Text.Length > 0) && (textBox_q.Text.Length > 0))
-            {
-                
-                long p = genSimpleLong(1024);
-                long q = genSimpleLong(Convert.ToInt32(p));
 
-                textBox_p.Text = p + "";
-                textBox_q.Text = q + "";
+            long p = genSimpleLong(1024);
+            long q = genSimpleLong(Convert.ToInt32(p));
+
+            textBox_p.Text = p + "";
+            textBox_q.Text = q + "";
 
 
-                if (IsTheNumberSimple(p) && IsTheNumberSimple(q))
-                {
-                    string s = richTextBox1.Text;
+            string s = richTextBox1.Text;
 
-                    s = s.ToUpper();
+            s = s.ToUpper();
 
-                    long n = p * q;
-                    long m = (p - 1) * (q - 1);
-                    long d = Calculate_d(m);
-                    long e_ = Calculate_e(d, m);
+            long n = p * q;
+            long m = (p - 1) * (q - 1);
+            long d = Calculate_d(m);
+            long e_ = Calculate_e(d, m);
 
-                    List<string> result = RSA_Encode(s, e_, n);
+            List<string> result = RSA_Encode(s, e_, n);
 
 
-                    richTextBox2.Lines = result.ToArray();
-                    
-                    textBox_d.Text = d.ToString();
-                    textBox_n.Text = n.ToString();
-                    
-                }
-                else
-                    MessageBox.Show("p или q - не простые числа!");
-            }
-            else
-                MessageBox.Show("Введите p и q!");
+            richTextBox2.Lines = result.ToArray();
+
+            textBox_d.Text = d.ToString();
+            textBox_n.Text = n.ToString();
+
         }
 
         //расшифровать
@@ -77,7 +67,8 @@ namespace protect_inf_LR1
 
                 List<string> input = new List<string>();
 
-                foreach (string str in richTextBox2.Lines) {
+                foreach (string str in richTextBox2.Lines)
+                {
 
                     input.Add(str);
 
@@ -86,23 +77,26 @@ namespace protect_inf_LR1
                 string result = RSA_Decode(input, d, n);
 
                 richTextBox1.Text = result;
-                
+
             }
             else
                 MessageBox.Show("Введите секретный ключ!");
         }
 
-        private long genSimpleLong(int n) {
+        private long genSimpleLong(int n)
+        {
 
             long result = 1;
 
-            if (n > 1) {
+            if (n > 1)
+            {
 
                 Random r = new Random(n);
 
                 result = r.Next(1, n);
 
-                while (!IsTheNumberSimple(result)) {
+                while (!IsTheNumberSimple(result))
+                {
 
                     result = r.Next(1, n);
 
@@ -177,7 +171,7 @@ namespace protect_inf_LR1
                 {
                     result += characters[index].ToString();
                 }
-               
+
             }
 
             return result;

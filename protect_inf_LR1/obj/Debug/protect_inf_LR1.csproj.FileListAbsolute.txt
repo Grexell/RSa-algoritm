@@ -52,3 +52,13 @@ C:\Users\demes\Desktop\RSA\protect_inf_LR1\obj\Debug\protect_inf_LR1.Properties.
 C:\Users\demes\Desktop\RSA\protect_inf_LR1\obj\Debug\protect_inf_LR1.csproj.GenerateResource.Cache
 C:\Users\demes\Desktop\RSA\protect_inf_LR1\obj\Debug\protect_inf_LR1.exe
 C:\Users\demes\Desktop\RSA\protect_inf_LR1\obj\Debug\protect_inf_LR1.pdb
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\bin\Debug\protect_inf_LR1.exe.config
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\bin\Debug\protect_inf_LR1.exe
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\bin\Debug\protect_inf_LR1.pdb
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\obj\Debug\protect_inf_LR1.csprojResolveAssemblyReference.cache
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\obj\Debug\protect_inf_LR1.Form1.resources
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\obj\Debug\protect_inf_LR1.Properties.Resources.resources
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\obj\Debug\protect_inf_LR1.csproj.GenerateResource.Cache
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\obj\Debug\protect_inf_LR1.csproj.CoreCompileInputs.cache
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\obj\Debug\protect_inf_LR1.exe
+D:\ЗКИ\RSa-algoritm\protect_inf_LR1\obj\Debug\protect_inf_LR1.pdb
